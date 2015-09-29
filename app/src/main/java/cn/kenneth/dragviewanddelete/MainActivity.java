@@ -1,6 +1,5 @@
 package cn.kenneth.dragviewanddelete;
 
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -71,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             holder.mTextView.setText(getItem(position).toString());
-            holder.mImageView.setImageDrawable(new ColorDrawable(colors[getItem(position) % 3]));
+            holder.mImageView.setImageResource(colors[getItem(position) % 3]);
             //隐藏被拖动的
             if (position == mHidePosition) {
                 convertView.setVisibility(View.INVISIBLE);
